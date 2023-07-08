@@ -1,0 +1,117 @@
+.container {
+  width: 70%;
+  margin: auto;
+  text-align: center;
+}
+
+.dice {
+  text-align: center;
+  display: inline-block;
+}
+
+body {
+  background: #505358;
+}
+
+h1 {
+  margin: 30px;
+  font-family: 'Nabla', cursive;
+  text-shadow: 5px 0 #232931;
+  font-size: 5rem;
+  color: #4ECCA3;
+}
+
+p {
+  font-size: 2rem;
+  color: #4ECCA3;
+  font-family: 'Aref Ruqaa Ink', serif;
+}
+
+img {
+  width: 80%;
+}
+
+footer {
+  margin-top: 5%;
+  color: #EEEEEE;
+  text-align: center;
+  font-family: 'Indie Flower', cursive;
+
+}
+.button1{  
+  position: relative;
+  top: 50px;
+}
+
+button{
+  padding: 10px;
+  font-family: "Bungee Spice";
+  background-color: #555555;
+  color: white;
+}
+
+.firework {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0.5vmin;
+  aspect-ratio: 1;
+  background-size: 0.5vmin 0.5vmin;
+  background-repeat: no-repeat;
+}
+
+@keyframes firework {
+  0% { 
+    transform: translate(-50%, 60vh);
+    width: 0.5vmin;
+    opacity: 1;
+  }
+  50% { 
+    width: 0.5vmin;
+    opacity: 1;
+  }
+  100% { 
+    width: 45vmin; 
+    opacity: 0; 
+  }
+}
+
+.firework,
+.firework::before,
+.firework::after {
+  --top: 60vh;
+  content: "";
+  position: absolute;
+  top: 10%;
+  left: 84%;
+  transform: translate(-50%, -50%);
+  width: 0.5vmin;
+  aspect-ratio: 1;
+  background:
+    /* random backgrounds */
+    radial-gradient(circle, rgb(3, 6, 49) 0.2vmin, #0000 0) 50% 00%,
+    radial-gradient(circle, rgb(124, 124, 119) 0.3vmin, #0000 0) 00% 50%,
+    radial-gradient(circle, rgb(15, 61, 104) 0.5vmin, #0000 0) 50% 99%,
+    radial-gradient(circle, rgb(25, 29, 65) 0.2vmin, #0000 0) 99% 50%,
+    radial-gradient(circle, #ff0 0.3vmin, #0000 0) 80% 90%,
+    radial-gradient(circle, rgb(23, 25, 134) 0.5vmin, #0000 0) 95% 90%,
+    radial-gradient(circle, rgb(22, 22, 17) 0.5vmin, #0000 0) 10% 60%,
+    radial-gradient(circle, rgb(172, 172, 50) 0.2vmin, #0000 0) 31% 80%,
+    radial-gradient(circle, rgb(43, 110, 36) 0.3vmin, #0000 0) 80% 10%,
+    radial-gradient(circle, rgb(88, 88, 87) 0.2vmin, #0000 0) 90% 23%,
+    radial-gradient(circle, rgb(212, 212, 198) 0.3vmin, #0000 0) 45% 20%,
+    radial-gradient(circle, #ff0 0.5vmin, #0000 0) 13% 24%
+    ;
+  background-size: 0.5vmin 0.5vmin;
+  background-repeat: no-repeat;
+  animation: firework 2s infinite;
+}
+
+.firework::before {
+  transform: translate(-50%, -50%) rotate(25deg) !important; 
+}
+
+.firework::after {
+  transform: translate(-50%, -50%) rotate(-37deg) !important;
+}
